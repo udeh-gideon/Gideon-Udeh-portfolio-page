@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Udeh Gideon Chiemerie - Personal Webpage</title>
+
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
         /* Custom Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Aptos' , 'Open Sans', 'Helvetica Neue', sans-serif, Arial, sans-serif;
             color: #333;
             margin: 0;
             padding: 0;
@@ -21,7 +25,7 @@
             text-align: center;
         }
         nav {
-            text-align: center;
+            /* text-align: center; */
             padding: 10px 0;
             background-color: #55AADD; /* Secondary Color */
             position: sticky;
@@ -77,39 +81,54 @@
             background-color: #DD8844; /* Highlight Color */
             color: white;
         }
+        .search-icon {
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+        }
     </style>
 </head>
-<body>
 
+<body>
+    <!-- Header section -->
     <header class="py-5">
         <h1 class="display-4">Udeh Gideon Chiemerie</h1>
-        <p class="lead">Research Writer | Machine Learning Engineer | Analyst | Career Coach</p>
+        <p class="lead">Research Writer | Machine Learning Engineer | Data Analyst | Career Coach</p>
     </header>
 
+    <!-- Navigation section -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">UGC</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+
+            <!-- For the Hamburger -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user"></i> About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog"><i class="fas fa-blog"></i> Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements"><i class="fas fa-trophy"></i> Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
                 </ul>
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-search search-icon" onclick="toggleSearch()"></i>
+                    <input type="text" class="form-control search-input" placeholder="Search...">
+                </div>
             </div>
         </div>
     </nav>
 
+    <!-- About Me section -->
     <section id="about" class="about my-5 text-center">
         <h2 class="mb-4">About Me</h2>
-        <img src="your-image-url.jpg" alt="Udeh Gideon Chiemerie" class="img-fluid">
-        <p class="mt-3 mx-auto" style="max-width: 600px;">Hello! I'm Udeh Gideon Chiemerie, a Mechanical Engineering graduate from UNN. I'm passionate about research, innovation, and capacity building. As a machine learning engineer and analyst, I combine technical skills with a love for the arts and the great outdoors. I also excel in graphic design and career coaching, and I'm known for my attention to detail, empathy, and sense of humor. I enjoy networking and cherish life's finest experiences. My faith is important to me, and I strive to live a life that reflects my values.</p>
+        <img src="./pictures/Udeh-Gideon--(2).jpg" alt="Udeh Gideon Chiemerie" class="img-fluid">
+        <p class="mt-3 mx-auto" style="max-width: 1800px;">Hello! I'm Udeh Gideon Chiemerie, a Mechanical Engineering graduate from UNN. I'm passionate about research, innovation, and capacity building. As a machine learning engineer and analyst, I combine technical skills with a love for the arts and the great outdoors. I also excel in graphic design and career coaching, and I'm known for my attention to detail, empathy, and sense of humor. I enjoy networking and cherish life's finest experiences. My faith is important to me, and I strive to live a life that reflects my values.</p>
     </section>
 
+    <!-- Portfolio section -->
     <section id="portfolio" class="portfolio my-5">
         <h2 class="mb-4 text-center">Portfolio</h2>
         <div class="text-center portfolio-filter mb-4">
@@ -118,63 +137,90 @@
             <button class="btn btn-secondary" onclick="filterPortfolio('graphic-design')">Graphic Design</button>
             <button class="btn btn-secondary" onclick="filterPortfolio('other')">Other Projects</button>
         </div>
+
+        <!-- Machine Learning portfolio -->
         <div class="row">
             <div class="col-md-4 portfolio-item" data-category="machine-learning">
-                <img src="your-project-image-url1.jpg" alt="Project 1" class="img-fluid">
                 <h3 class="mt-2">Machine Learning Project 1</h3>
+                <img src="./pictures/ml-proj-illustration.jpg" alt="Project 1" class="img-fluid">
+                Image credit: Photo by <a href="https://unsplash.com/@siderius_creativ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Gerard Siderius</a> on <a href="https://unsplash.com/photos/a-robot-holding-a-gun-next-to-a-pile-of-rolls-of-toilet-paper-YeoSV_3Up-k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
                 <p>Brief description of Machine Learning Project 1.</p>
             </div>
+
+            <!-- Graphic design portfolio -->
             <div class="col-md-4 portfolio-item" data-category="graphic-design">
-                <img src="your-project-image-url2.jpg" alt="Project 2" class="img-fluid">
                 <h3 class="mt-2">Graphic Design Project 2</h3>
+                <img src="./pictures/graphic-design.jpg" alt="Project 2" class="img-fluid">
+                Image credit: Photo by <a href="https://unsplash.com/@emilybernal?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Emily Bernal</a> on <a href="https://unsplash.com/photos/silver-imac-and-apple-keyboard-v9vII5gV8Lw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
                 <p>Brief description of Graphic Design Project 2.</p>
             </div>
+
+            <!-- Other project portfolio -->
             <div class="col-md-4 portfolio-item" data-category="other">
-                <img src="your-project-image-url3.jpg" alt="Project 3" class="img-fluid">
                 <h3 class="mt-2">Other Project 3</h3>
+                <img src="./pictures/other-proj.jpg" alt="Project 3" class="img-fluid">
+                Image credit: Photo by <a href="https://unsplash.com/@simonkadula?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Simon Kadula</a> on <a href="https://unsplash.com/photos/a-factory-filled-with-lots-of-orange-machines-8gr6bObQLOI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
                 <p>Brief description of Other Project 3.</p>
             </div>
         </div>
     </section>
 
+    <!-- Blog section -->
     <section id="blog" class="blog my-5">
         <h2 class="mb-4 text-center">Blog</h2>
         <div class="row">
             <div class="col-md-6 mb-4">
-                <img src="https://source.unsplash.com/600x400/?technology" alt="Tech Blog" class="img-fluid">
                 <h3 class="mt-2">Exploring the Future of Machine Learning</h3>
+                <img src="./pictures/ai-illustration.jpg" alt="Tech Blog" class="img-fluid" >
+                Image credit: Photo by <a href="https://unsplash.com/@steve_j?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Steve Johnson</a> on <a href="https://unsplash.com/photos/a-computer-generated-image-of-the-letter-a-ZPOoDQc8yMw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare...</p>
                 <a href="#" class="btn btn-outline-primary">Read More</a>
             </div>
+
+            <!-- Graphic design blog-post -->
+            <h3 class="mt-2">The Art of Graphic Design</h3>
             <div class="col-md-6 mb-4">
-                <img src="https://source.unsplash.com/600x400/?design" alt="Design Blog" class="img-fluid">
-                <h3 class="mt-2">The Art of Graphic Design</h3>
+                <img src="./pictures/vr-goggles.jpg" alt="Design Blog" class="img-fluid">
+                Image credit: Photo by <a href="https://unsplash.com/@omilaev?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Igor Omilaev</a> on <a href="https://unsplash.com/photos/a-pair-of-virtual-glasses-on-a-pink-and-yellow-background-p059oXBEWe4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
                 <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit...</p>
                 <a href="#" class="btn btn-outline-primary">Read More</a>
             </div>
+
+            <!-- Out-door experiences -->
+            <h3 class="mt-2">Adventures in the Great Outdoors</h3>
             <div class="col-md-6 mb-4">
-                <img src="https://source.unsplash.com/600x400/?outdoors" alt="Outdoors Blog" class="img-fluid">
-                <h3 class="mt-2">Adventures in the Great Outdoors</h3>
+                <img src="./pictures/outdoor-exp.jpg" alt="Outdoors Blog" class="img-fluid">
+                Image credit: Photo by <a href="https://unsplash.com/@yaroslavsaprykin?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">YAROSLAV SAPRYKIN</a> on <a href="https://unsplash.com/photos/an-electric-vehicle-is-parked-on-the-side-of-the-road-hFLkZPYBHfA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
                 <p>Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis...</p>
                 <a href="#" class="btn btn-outline-primary">Read More</a>
             </div>
+
+            <!-- Research posts -->
+            <h3 class="mt-2">Innovations in Research and Technology</h3>
             <div class="col-md-6 mb-4">
-                <img src="https://source.unsplash.com/600x400/?research" alt="Research Blog" class="img-fluid">
-                <h3 class="mt-2">Innovations in Research and Technology</h3>
+                <img src="./pictures/advanced-ai.jpg" alt="Research Blog" class="img-fluid">
+                Image credit: Photo by <a href="https://unsplash.com/@possessedphotography?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Possessed Photography</a> on <a href="https://unsplash.com/photos/closeup-photo-of-white-robot-arm-jIBMSMs4_kA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  
                 <p>Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet...</p>
                 <a href="#" class="btn btn-outline-primary">Read More</a>
             </div>
         </div>
     </section>
 
-
+    <!-- Contact section -->
     <section id="contact" class="contact my-5 text-center">
         <h2 class="mb-4">Contact</h2>
         <p>You can reach me through the following channels:</p>
         <ul class="list-unstyled">
-            <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
-            <li>Phone: +234-123-456-7890</li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></li>
+            <li>Email: <a href="mailto:your-email@example.com">gideonchiemerie222@gmail.com</a></li>
+            <li>Phone: +234-916-340-4775</li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/gideon-udeh-4a1432196" target="_blank">linkedin.com/in/gideon-udeh-4a1432196</a></li>
         </ul>
         <div class="logos mt-4">
             <h3 class="mb-3">My Logos:</h3>
@@ -183,6 +229,7 @@
         </div>
     </section>
 
+    <!-- Footer section -->
     <footer class="py-4">
         <p>&copy; 2024 Udeh Gideon Chiemerie. All rights reserved.</p>
     </footer>
